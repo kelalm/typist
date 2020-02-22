@@ -1,9 +1,21 @@
 import React from "react";
 
+import fire from "../../config/fire";
+
 import "bootstrap/dist/css/bootstrap.min.css";
 import "shards-ui/dist/css/shards.min.css";
 
 function Home() {
+  var db = fire.firestore();
+  //   db.collection("paragraphs")
+  //     .doc()
+  //     .get()
+  //     .then(function(doc) {
+  //       console.log(doc.data());
+  //     })
+  //     .catch(function(error) {
+  //       console.log("Error getting documents: ", error);
+  //     });
   return (
     <div className="App">
       <header className="App-header">
