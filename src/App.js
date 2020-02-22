@@ -6,27 +6,25 @@ import "bootstrap/dist/css/bootstrap.min.css";
 import "shards-ui/dist/css/shards.min.css";
 
 import NavigationBar from "./components/NavigationBar";
+import Home from "./components/pages/Home";
+import Login from "./components/pages/Login";
+
+import { BrowserRouter as Router, Switch, Route } from "react-router-dom";
+import { ListGroupItemHeading } from "shards-react";
 
 function App() {
   return (
-    <div className="App">
-      <header className="App-header">
-        <NavigationBar></NavigationBar>
-        <h1 className="heading">Getting Started</h1>
-        <p>
-          Welcome to <code>Typist.</code> Start as a guest, or create an
-          account.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          A message from the developer.
-        </a>
-      </header>
-    </div>
+    <Router>
+      <div className="App">
+        <header className="App-header">
+          <NavigationBar></NavigationBar>
+          <Switch>
+            <Route path="/" exact component={Home}></Route>
+            <Route path="/login" component={Login}></Route>
+          </Switch>
+        </header>
+      </div>
+    </Router>
   );
 }
 
