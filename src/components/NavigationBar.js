@@ -13,7 +13,7 @@ export default function NavExample() {
         <NavLink href="#">Leaderboards</NavLink>
       </NavItem>
       <NavItem>
-        <NavLink href="#">My Account</NavLink>
+        <NavLink href="/login">My Account</NavLink>
       </NavItem>
     </Nav>
   );
