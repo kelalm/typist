@@ -2,9 +2,6 @@ import React from "react";
 
 import LoginForm from "../LoginForm";
 
-import "bootstrap/dist/css/bootstrap.min.css";
-import "shards-ui/dist/css/shards.min.css";
-
 function Login() {
   return (
     <div className="App">

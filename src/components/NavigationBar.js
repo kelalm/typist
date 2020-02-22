@@ -5,12 +5,12 @@ export default function NavExample() {
   return (
     <Nav>
       <NavItem>
-        <NavLink active href="#">
+        <NavLink active href="/">
           Home
         </NavLink>
       </NavItem>
       <NavItem>
-        <NavLink href="#">Leaderboards</NavLink>
+        <NavLink href="/leaderboards">Leaderboards</NavLink>
       </NavItem>
       <NavItem>
         <NavLink href="/login">My Account</NavLink>

@@ -7,6 +7,7 @@ import "shards-ui/dist/css/shards.min.css";
 
 import NavigationBar from "./components/NavigationBar";
 import Home from "./components/pages/Home";
+import Leaderboards from "./components/pages/Leaderboards";
 import Login from "./components/pages/Login";
 
 import { BrowserRouter as Router, Switch, Route } from "react-router-dom";
@@ -20,6 +21,7 @@ function App() {
           <NavigationBar></NavigationBar>
           <Switch>
             <Route path="/" exact component={Home}></Route>
+            <Route path="/leaderboards" component={Leaderboards}></Route>
             <Route path="/login" component={Login}></Route>
           </Switch>
         </header>
