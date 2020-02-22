@@ -5,11 +5,13 @@ import "./App.css";
 import "bootstrap/dist/css/bootstrap.min.css";
 import "shards-ui/dist/css/shards.min.css";
 
+import NavigationBar from "./components/NavigationBar";
+
 function App() {
   return (
     <div className="App">
       <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
+        <NavigationBar></NavigationBar>
         <h1 className="heading">Getting Started</h1>
         <p>
           Welcome to <code>Typist.</code> Start as a guest, or create an
@@ -21,7 +23,7 @@ function App() {
           target="_blank"
           rel="noopener noreferrer"
         >
-          Learn React
+          A message from the developer.
         </a>
       </header>
     </div>
