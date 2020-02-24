@@ -1,5 +1,5 @@
 import React from "react";
-import { Form, FormInput, FormGroup } from "shards-react";
+import { Form, FormInput, FormGroup, Button } from "shards-react";
 
 export default function LoginForm() {
   return (
@@ -11,6 +11,7 @@ export default function LoginForm() {
       <FormGroup>
         <label htmlFor="#password">Password</label>
         <FormInput type="password" id="#password" placeholder="Password" />
+        <Button theme="success">Log in</Button>
       </FormGroup>
     </Form>
   );
