@@ -1,17 +1,43 @@
-import React from "react";
+import React, { useState } from "react";
 import { Form, FormInput, FormGroup, Button } from "shards-react";
 
-export default function LoginForm() {
+export default function LoginForm(props) {
+  const [email, setEmail] = useState("");
+  const [password, setPassword] = useState("");
+
+  function validateForm() {
+    return email.length > 0 && password.length > 0;
+  }
+
+  function handleSubmit(event) {
+    event.preventDefault();
+    console.log(email);
+    console.log(password);
+  }
+
   return (
-    <Form>
+    <Form onSubmit={handleSubmit}>
       <FormGroup>
-        <label htmlFor="#username">Username</label>
-        <FormInput id="#username" placeholder="Username" />
+        <label htmlFor="email">Email</label>
+        <FormInput
+          id="email"
+          placeholder="Email"
+          value={email}
+          onChange={e => setEmail(e.target.value)}
+        />
       </FormGroup>
       <FormGroup>
-        <label htmlFor="#password">Password</label>
-        <FormInput type="password" id="#password" placeholder="Password" />
-        <Button theme="success">Log in</Button>
+        <label htmlFor="password">Password</label>
+        <FormInput
+          type="password"
+          id="password"
+          placeholder="Password"
+          value={password}
+          onChange={e => setPassword(e.target.value)}
+        />
+        <Button onClick={handleSubmit} theme="success">
+          Log in
+        </Button>
       </FormGroup>
     </Form>
   );
