@@ -4,6 +4,7 @@ import { Form, FormInput, FormGroup, Button } from "shards-react";
 export default function SignUpForm(props) {
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
+  const [confirmPassword, setConfirmPassword] = useState("");
 
   function validateForm() {
     return email.length > 0 && password.length > 0;
@@ -13,6 +14,7 @@ export default function SignUpForm(props) {
     event.preventDefault();
     console.log(email);
     console.log(password);
+    console.log(confirmPassword);
   }
 
   return (
@@ -35,8 +37,20 @@ export default function SignUpForm(props) {
           value={password}
           onChange={e => setPassword(e.target.value)}
         />
+      </FormGroup>
+      <FormGroup>
+        <label htmlFor="password">Confirm Password</label>
+        <FormInput
+          type="confirmpassword"
+          id="confirmpassword"
+          placeholder="Confirm Password"
+          value={confirmPassword}
+          onChange={e => setConfirmPassword(e.target.value)}
+        />
+      </FormGroup>
+      <FormGroup>
         <Button onClick={handleSubmit} theme="success">
-          Log in
+          Sign up
         </Button>
       </FormGroup>
     </Form>
