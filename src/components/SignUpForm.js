@@ -1,5 +1,6 @@
 import React, { useState } from "react";
 import { Form, FormInput, FormGroup, Button } from "shards-react";
+import fire from "../config/fire";
 
 export default function SignUpForm(props) {
   const [email, setEmail] = useState("");
@@ -15,6 +16,19 @@ export default function SignUpForm(props) {
     console.log(email);
     console.log(password);
     console.log(confirmPassword);
+    validateForm();
+    fire
+      .auth()
+      .createUserWithEmailAndPassword(email, password)
+      .catch(function(error) {
+        // Handle Errors here.
+        var errorCode = error.code;
+        var errorMessage = error.message;
+        console.log(errorCode);
+        console.log(errorMessage);
+        // ...
+      });
+    console.log("handle submit done!");
   }
 
   return (

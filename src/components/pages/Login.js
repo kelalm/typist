@@ -9,8 +9,8 @@ function Login() {
   const [modeButton, setModeButton] = useState("Create an account");
 
   function handleModeClick(event) {
-    mode == "Login" ? setMode("Create an account") : setMode("Login");
-    modeButton == "Login"
+    mode === "Login" ? setMode("Create an account") : setMode("Login");
+    modeButton === "Login"
       ? setModeButton("Create an account")
       : setModeButton("Login");
   }
@@ -19,7 +19,7 @@ function Login() {
     <div className="App">
       <header className="App-header">
         <h1 className="heading">{mode}</h1>
-        {mode == "Login" ? <LoginForm></LoginForm> : <SignUpForm></SignUpForm>}
+        {mode === "Login" ? <LoginForm></LoginForm> : <SignUpForm></SignUpForm>}
         <Button theme="dark" onClick={handleModeClick}>
           {modeButton}
         </Button>
