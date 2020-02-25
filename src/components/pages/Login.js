@@ -19,8 +19,7 @@ function Login() {
     <div className="App">
       <header className="App-header">
         <h1 className="heading">{mode}</h1>
-        <LoginForm></LoginForm>
-        <SignUpForm></SignUpForm>
+        {mode == "Login" ? <LoginForm></LoginForm> : <SignUpForm></SignUpForm>}
         <Button theme="dark" onClick={handleModeClick}>
           {modeButton}
         </Button>
