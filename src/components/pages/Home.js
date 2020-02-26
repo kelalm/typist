@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useState, useEffect } from "react";
 
 import fire from "../../config/fire";
 
@@ -16,6 +16,20 @@ function Home() {
   //     .catch(function(error) {
   //       console.log("Error getting documents: ", error);
   //     });
+
+  useEffect(() => {
+    console.log("Rendering home");
+    var user = fire.auth().currentUser;
+
+    if (user) {
+      // User is signed in.
+      console.log("User is signed in");
+    } else {
+      // No user is signed in.
+      console.log("User is not signed in");
+    }
+  });
+
   return (
     <div className="App">
       <header className="App-header">
