@@ -17,6 +17,7 @@ export default function SignUpForm(props) {
     console.log(password);
     console.log(confirmPassword);
     validateForm();
+
     fire
       .auth()
       .createUserWithEmailAndPassword(email, password)
@@ -29,6 +30,14 @@ export default function SignUpForm(props) {
         // ...
       });
     console.log("handle submit done!");
+
+    fire.auth().onAuthStateChanged(function(user) {
+      if (user) {
+        window.location.href = "/";
+      } else {
+        // No user is signed in.
+      }
+    });
   }
 
   return (
