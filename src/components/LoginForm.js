@@ -19,6 +19,13 @@ export default function LoginForm(props) {
     fire
       .auth()
       .signInWithEmailAndPassword(email, password)
+      .then(function(user) {
+        if (user) {
+          window.location = "/";
+        } else {
+          // No user is signed in.
+        }
+      })
       .catch(function(error) {
         // Handle Errors here.
         var errorCode = error.code;
@@ -28,14 +35,6 @@ export default function LoginForm(props) {
         // ...
       });
     console.log("handle submit done!");
-
-    fire.auth().onAuthStateChanged(function(user) {
-      if (user) {
-        window.location.href = "/";
-      } else {
-        // No user is signed in.
-      }
-    });
   }
 
   return (

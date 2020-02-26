@@ -17,6 +17,14 @@ function Home() {
   //       console.log("Error getting documents: ", error);
   //     });
 
+  // fire.auth().onAuthStateChanged(function(user) {
+  //   if (user) {
+  //     window.location.href = "/";
+  //   } else {
+  //     // No user is signed in.
+  //   }
+  // });
+
   useEffect(() => {
     console.log("Rendering home");
     var user = fire.auth().currentUser;
