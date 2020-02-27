@@ -18,15 +18,19 @@ function App() {
   return (
     <Router>
       <div className="App">
-        <header className="App-header">
+        <header className="App-header container">
           <NavigationBar></NavigationBar>
-          <Switch>
-            <Route path="/" exact component={Home}></Route>
-            <Route path="/leaderboards" component={Leaderboards}></Route>
-            <Route path="/login" component={Login}></Route>
-            <Route path="/race" component={Race}></Route>
-          </Switch>
         </header>
+        <body>
+          <div className="container">
+            <Switch>
+              <Route path="/" exact component={Home}></Route>
+              <Route path="/leaderboards" component={Leaderboards}></Route>
+              <Route path="/login" component={Login}></Route>
+              <Route path="/race" component={Race}></Route>
+            </Switch>
+          </div>
+        </body>
       </div>
     </Router>
   );
