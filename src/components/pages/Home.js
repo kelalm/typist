@@ -48,8 +48,15 @@ function Home() {
           Welcome to <code>Typist.</code> Start as a guest, or create an
           account.
         </p>
-        <MainCard raceType={"Random"}></MainCard>
-        <MainCard raceType={"Private"}></MainCard>
+        <div class="row">
+          <div className="col-xl-6 col-lg-6 col-md-6 col-sm-6 col-12">
+            <MainCard raceType={"Random"}></MainCard>
+          </div>
+          <div className="col-xl-6 col-lg-6 col-md-6 col-sm-6 col-12">
+            <MainCard raceType={"Private"}></MainCard>
+          </div>
+        </div>
+
         <a
           className="App-link"
           href="https://reactjs.org"
