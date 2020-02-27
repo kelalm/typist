@@ -9,6 +9,7 @@ import NavigationBar from "./components/NavigationBar";
 import Home from "./components/pages/Home";
 import Leaderboards from "./components/pages/Leaderboards";
 import Login from "./components/pages/Login";
+import Race from "./components/pages/Race";
 
 import { BrowserRouter as Router, Switch, Route } from "react-router-dom";
 import { ListGroupItemHeading } from "shards-react";
@@ -23,6 +24,7 @@ function App() {
             <Route path="/" exact component={Home}></Route>
             <Route path="/leaderboards" component={Leaderboards}></Route>
             <Route path="/login" component={Login}></Route>
+            <Route path="/race" component={Race}></Route>
           </Switch>
         </header>
       </div>
