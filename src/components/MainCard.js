@@ -9,17 +9,16 @@ import {
   Button
 } from "shards-react";
 
-export default function MainCard() {
+export default function MainCard(props) {
   return (
     <Card style={{ maxWidth: "300px" }}>
-      <CardHeader>Card header</CardHeader>
-      <CardImg src="https://place-hold.it/300x200" />
+      <CardHeader>Start a new game</CardHeader>
       <CardBody>
-        <CardTitle>Lorem Ipsum</CardTitle>
-        <p>Lorem ipsum dolor sit amet.</p>
-        <Button>Read more &rarr;</Button>
+        <CardTitle>New Paragraph Race</CardTitle>
+        <p>Join a random lobby with random people Hop in by yourself!.</p>
+        <Button>Join &rarr;</Button>
       </CardBody>
-      <CardFooter>Card footer</CardFooter>
+      <CardFooter>You will be matched into a lobby.</CardFooter>
     </Card>
   );
 }

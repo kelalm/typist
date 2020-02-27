@@ -48,6 +48,7 @@ function Home() {
           Welcome to <code>Typist.</code> Start as a guest, or create an
           account.
         </p>
+        <MainCard raceType={"random"}></MainCard>
         <MainCard></MainCard>
         <a
           className="App-link"
