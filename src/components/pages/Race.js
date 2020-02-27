@@ -8,6 +8,7 @@ export default function Race() {
     <div>
       <h1 className="heading">Race</h1>
       <ParagraphCard></ParagraphCard>
+      <EntryBox></EntryBox>
     </div>
   );
 }

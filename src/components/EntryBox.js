@@ -17,7 +17,7 @@ export default class EntryBox extends React.Component {
     return (
       <div>
         <p className="mb-2">
-          {(value && `🗣 ${value}`) || "🤔 Waiting for you to say something..."}
+          {(value && `🗣 ${value}`) || "🤔 Waiting for you to type something..."}
         </p>
         <FormTextarea onChange={this.handleChange} />
       </div>
