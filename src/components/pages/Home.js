@@ -2,6 +2,8 @@ import React, { useState, useEffect } from "react";
 
 import fire from "../../config/fire";
 
+import MainCard from "../../components/MainCard";
+
 import "bootstrap/dist/css/bootstrap.min.css";
 import "shards-ui/dist/css/shards.min.css";
 
@@ -46,6 +48,7 @@ function Home() {
           Welcome to <code>Typist.</code> Start as a guest, or create an
           account.
         </p>
+        <MainCard></MainCard>
         <a
           className="App-link"
           href="https://reactjs.org"
