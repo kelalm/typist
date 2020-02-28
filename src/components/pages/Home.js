@@ -34,9 +34,11 @@ function Home() {
     if (user) {
       // User is signed in.
       console.log("User is signed in");
+      console.log(user);
     } else {
       // No user is signed in.
       console.log("User is not signed in");
+      console.log(user);
     }
   });
 

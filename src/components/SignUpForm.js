@@ -63,7 +63,7 @@ export default function SignUpForm(props) {
       <FormGroup>
         <label htmlFor="password">Confirm Password</label>
         <FormInput
-          type="confirmpassword"
+          type="password"
           id="confirmpassword"
           placeholder="Confirm Password"
           value={confirmPassword}
