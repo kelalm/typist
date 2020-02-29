@@ -46,10 +46,10 @@ function Home() {
     <div className="App">
       <header className="App-header">
         <h1 className="heading">Getting Started</h1>
-        <p>
-          Welcome to <code>Typist.</code> Start as a guest, or create an
-          account.
-        </p>
+        <h3>
+          Welcome to <span class="colored">Typist.</span> Start as a guest, or
+          create an account.
+        </h3>
         <div class="row">
           <div className="col-xl-6 col-lg-6 col-md-6 col-sm-6 col-12">
             <MainCard raceType={"Random"}></MainCard>
